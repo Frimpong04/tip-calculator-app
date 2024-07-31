@@ -16,6 +16,11 @@ html {
     --white: hsl(0, 0%, 100%);
 }
 
+@font-face {
+    font-family: space-mono;
+    src: url("Space_Mono/SpaceMono-Bold.ttf");
+}
+
 body {
     background-color: var(--light-grayish-cyan);
     display: flex;
@@ -23,6 +28,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: space-mono;
 }
 
 .title {
@@ -57,6 +63,14 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--dark-grayish-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    background-image: url("images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: center left; 
+}
+
+input:focus {
+    outline: 1px solid var(--strong-cyan);
 }
 
 .error {
@@ -78,12 +92,13 @@ body {
     align-items: center;
     width: 100%;
 }
+
 .top-row {
     margin-bottom: 0.5rem;
 }
 
 .row-1 {
-    background-color: var(--dark-grayish-cyan);
+    background-color: var(--very-dark-cyan);
     width: 100%;
     padding: 1rem;
     font-size: 1.8rem;
@@ -91,6 +106,13 @@ body {
     border-radius: 0.5rem;
     color: var(--white);
     /* border: 1px solid rgb(60, 0, 128); */
+    transition: background-color 0.5s ease-in-out;
+}
+
+.row-1:hover {
+    cursor: pointer;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
 }
 
 .row-2 {
@@ -108,17 +130,29 @@ body {
     padding: 1rem;
     margin: 0;
     border: 1px solid var(--dark-grayish-cyan);
+    background-color: var(--very-light-grayish-cyan);
 }
 
 .twenty-five,
 .fifty {
-    background-color: var(--dark-grayish-cyan);
+    background-color: var(--very-dark-cyan);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.twenty-five:hover,
+.fifty:hover {
+    background-color: var(--strong-cyan);
+    cursor: pointer;
+    color: var(--very-dark-cyan);
 }
 
 #people-number {
     width: 100%;
     padding: 0.5rem;
-
+    background-color: var(--very-light-grayish-cyan);
+    background-image: url("images/icon-person.svg");
+    background-position: center left;
+    background-repeat: no-repeat;
 }
 
 .people-number-container {
@@ -151,29 +185,37 @@ body {
 }
 
 .tip-per-person {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .output-title {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: var(--very-light-grayish-cyan);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .subtitle-paragragh {
     color: var(--very-light-grayish-cyan);
-    font-size:1.2rem;
+    font-size:1rem;
 }
 
 .amount {
-    font-size: 4rem;
-    color: var(--very-light-grayish-cyan);
+    font-size: 3rem;
+    color: var(--strong-cyan);
 }
+
 button {
     padding: 1rem;
     background-color: var(--strong-cyan);
     border: none;
     outline: none;
     border-radius: 0.5rem;
-    color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    transition: background-color 0.5s ease-in-out;
+    font-size: 1.4rem;
+}
+
+button:hover {
+    background-color: var(--light-grayish-cyan);
+    cursor: pointer;
 }
