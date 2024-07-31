@@ -25,30 +25,24 @@
             <p class="label">Select Tip %</p>
             <div class="tip-percentage">
                 <div class="top-row">
-                    <div class="row-1 fivr">
-                        <p> 5%</p>
-                    </div>
-                    <div class="row-1 ten"> 
-                        <p>10%</p>
-                    </div>
-                    <div class="row-1 fifteen">
-                        <p>15%</p>
-                    </div>
+                    <span class="row-1 five"> 5%</span>
+    
+                    <span class="row-1 ten"> 10% </span>
+                  
+                    <span class="row-1 fifteen"> 15% </span>
+                   
                 </div>
 
                 <div class="bottom-row">
-                    <div class="row-2 twenty-five">
-                        <p>25%</p>
-                    </div>
-                    <div class="row-2 fifty">
-                        <p>50%</p>
-                    </div>
-                    <div class="row-2">
-                        <input type="number" name="custom-input" id="custom-input" placeholder="Custom" class="row-2 custom-input">
-                    </div>
-                   
-                
+                    <span class="row-2 twenty-five">25%</span>
+                  
+                    <span class="row-2 fifty">50%</span>
                     
+                    <!-- <span class="row-2 custom-input-span">
+                        <input type="number" name="custom-input" id="custom-input" placeholder="Custom" class="row-2 custom-input">
+                    </span> -->
+                    
+                    <input type="number" name="custom-input" id="custom-input" placeholder="Custom" class="row-2 custom-input">
                 </div>
             </div>
 
@@ -65,18 +59,18 @@
             <div class="tip-per-person-container">
                 <div class="tip-per-person">
                     <div class="tip-container">
-                        <p class="tip-paragraph">Tip</p>
-                        <p class="per-person-paragragh"> / person</p>
+                        <p class="output-title">Tip Amount</p>
+                        <p class="subtitle-paragragh"> / person</p>
                     </div>
-                    <p class="per-peron-tip-output">$ 0.00</p>
+                    <p class="per-peron-tip-output amount">$ <span>0.00</span></p>
                 </div>
     
                 <div class="total-per-person">
                     <div class="total-container">
-                        <p class="total-paragragh">Total</p>
-                        <p class="per-person-paragragh">/ person</p>
+                        <p class="output-title">Total</p>
+                        <p class="subtitle-paragragh">/ person</p>
                     </div>
-                    <p class="per-person-total-paragraph">$ 0.00</p>
+                    <p class="per-person-total-paragraph amount">$ <span>0.00</span></p>
                 </div>
             </div>
 

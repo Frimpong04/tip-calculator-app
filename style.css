@@ -26,33 +26,46 @@ body {
 }
 
 .title {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
+
 .main-container {
     background-color: var(--white);
     border-radius: 2rem;
     display: flex;
     padding: 2rem;
-    width: 540px;
+    width: 600px;
     gap: 1rem;
 }
 
+/* input section styles */
 .input-section {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex: 50% 1 1;
-    padding:2rem 0;
+    padding:2rem 1rem;
 }
 
 .label {
     margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--grayish-cyan);
 }
 
 #bill{
     margin-bottom: 2rem;
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark-grayish-cyan);
 }
 
+.error {
+    color: red;
+    font-size: 1.4rem;
+    visibility: hidden;
+}
+
+/* tip percentage section styles */
 .tip-percentage {
     margin-bottom: 2rem;
 }
@@ -65,20 +78,36 @@ body {
     align-items: center;
     width: 100%;
 }
+.top-row {
+    margin-bottom: 0.5rem;
+}
 
 .row-1 {
     background-color: var(--dark-grayish-cyan);
     width: 100%;
     padding: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: var(--white);
+    /* border: 1px solid rgb(60, 0, 128); */
 }
 
 .row-2 {
     width: 100%;
     padding: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: var(--white);
+    /* border: 1px solid blue; */
 }
 
 .custom-input {
-    width: 100%;
+    /* width: 100%; */
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid var(--dark-grayish-cyan);
 }
 
 .twenty-five,
@@ -98,6 +127,12 @@ body {
     align-items: center;
 }
 
+#people-number {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid var(--dark-grayish-cyan);
+}
+/* ouput section styles */
 .output-section {
     background-color: var(--very-dark-cyan);
     padding: 2rem;
@@ -112,14 +147,33 @@ body {
 .total-per-person {
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
 
+.tip-per-person {
+    margin-bottom: 3rem;
+}
+
+.output-title {
+    font-size: 1.6rem;
+    color: var(--very-light-grayish-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle-paragragh {
+    color: var(--very-light-grayish-cyan);
+    font-size:1.2rem;
+}
+
+.amount {
+    font-size: 4rem;
+    color: var(--very-light-grayish-cyan);
+}
 button {
     padding: 1rem;
     background-color: var(--strong-cyan);
     border: none;
     outline: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: var(--very-light-grayish-cyan);
 }
