@@ -35,6 +35,12 @@ body {
     margin-bottom: 4rem;
 }
 
+.title p {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    font-weight: normal;
+}
+
 .main-container {
     background-color: var(--white);
     border-radius: 2rem;
@@ -207,7 +213,7 @@ input:focus {
 }
 
 .subtitle-paragragh {
-    color: var(--light-grayish-cyan);
+    color: var(--grayish-cyan);
     font-size:1rem;
 }
 
@@ -230,4 +236,28 @@ button {
 button:hover {
     background-color: var(--light-grayish-cyan);
     cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+
+    body {
+        height: auto;
+    }
+
+    .title {
+        margin: 3rem 0 1rem 0;
+    }
+
+    .main-container {
+        flex-direction: column;
+        width: 65%;
+    }
+
+    .tip-per-person {
+        margin-bottom: 1rem;
+    }
+
+    .total-per-person {
+        margin-bottom: 2rem;
+    }
 }
