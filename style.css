@@ -245,7 +245,7 @@ button:hover {
     }
 
     .title {
-        margin: 3rem 0 1rem 0;
+        margin: 3.5rem 0 1rem 0;
     }
 
     .main-container {
@@ -259,5 +259,11 @@ button:hover {
 
     .total-per-person {
         margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 375) {
+    .main-container {
+        width: 100%;
     }
 }
