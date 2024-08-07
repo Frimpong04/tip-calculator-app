@@ -11,13 +11,15 @@ const fiftyPercent = document.querySelector(".fifty");
 const customPercent = document.querySelector(".custom-input");
 
 
-const billInputValue = billInput.value ;
-const numberOfPeopleInputValue = numberOfPeopleInput.value;
-const customPercentValue = customPercent.value;
+// // const billInputValue = billInput.value ;
+// const billInputValue = Number(billInput.value);
+// // const numberOfPeopleInputValue = numberOfPeopleInput.value;
+// const numberOfPeopleInputValue = Number(numberOfPeopleInput.value);
+// const customPercentValue = Number(customPercent.value);
 
 // output elements
-const perPersonTipOutput = document.querySelector(".tip-per-person-output");
-const perPersonTotal = document.querySelector(".per-person-total-paragraph");
+const totalTipAmount = document.querySelector(".tip-amount-per-head");
+const perPersonTotal = document.querySelector(".total-tip");
 
 // error element
 const errorMessage = document.querySelector(".error");
@@ -25,8 +27,8 @@ const errorMessage = document.querySelector(".error");
 // button element
 const btn = document.querySelector("button");
 
-let totalTip;
-let tipPercent
+
+let tipPercent;
 
 // addEventListenr
 fivePercent.addEventListener("click", (e) => {
@@ -63,21 +65,26 @@ fiftyPercent.addEventListener("click", () => {
     console.log(tipPercent);
 })
 
-btn.addEventListener("click", () => {
+
+btn.addEventListener("click", (e) => {
     console.log("button clicked");
-
+    e.preventDefault();
    
-
+    // const billInputValue = billInput.value ;
+    const billInputValue = Number(billInput.value);
+    // const numberOfPeopleInputValue = numberOfPeopleInput.value;
+    const numberOfPeopleInputValue = Number(numberOfPeopleInput.value);
+    const customPercentValue = Number(customPercent.value);
     // validation logic
     if(!billInputValue || billInputValue < 0) {
-        billInput.classList.add("error");
-        return; 
+        billInput.classList.add("error-input");
+        // return; 
     }
 
     if(!numberOfPeopleInputValue || numberOfPeopleInputValue < 0) {
         errorMessage.style.visibility = "visible";
-        numberOfPeopleInput.classList.add("error");
-        return;
+        numberOfPeopleInput.classList.add("error-input");
+        // return;
     }
 
     if(customPercentValue) {
@@ -85,5 +92,16 @@ btn.addEventListener("click", () => {
     }
 
     console.log(billInputValue, numberOfPeopleInputValue, customPercentValue, tipPercent);
+
+    // total = amount * percent /100
+    const tip = Math.floor((billInputValue * tipPercent) / 100);
+
+    const totalTip = tip * numberOfPeopleInputValue;
+
+    console.log("Tip amount " + tip + ", " + "total tip " + totalTip);
+
+    console.log(totalTipAmount, perPersonTotal);
+    totalTipAmount.textContent = tip;
+    perPersonTotal.textContent = totalTip;
 
 })
