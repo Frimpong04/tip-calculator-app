@@ -24,6 +24,14 @@ billInput.addEventListener("focus", () => {
 numberOfPeopleInput.addEventListener("focus", () => {
     numberOfPeopleInput.classList.remove("error-input");
     errorMessage.style.visibility = "hidden";
+});
+
+customPercent.addEventListener("focus", () => {
+    fivePercent.classList.remove("active");
+    tenPercent.classList.remove("active");
+    fifteenPercent.classList.remove("active");
+    twentyFivePercent.classList.remove("active");
+    fiftyPercent.classList.remove("active");
 })
 
 // button element
@@ -120,6 +128,11 @@ resultBtn.addEventListener("click", (e) => {
 
     if(customPercentValue) {
         tipPercent = customPercentValue;
+        fivePercent.classList.remove("active");
+        tenPercent.classList.remove("active");
+        fifteenPercent.classList.remove("active");
+        twentyFivePercent.classList.remove("active");
+        fiftyPercent.classList.remove("active");
     }
 
     console.log(billInputValue, numberOfPeopleInputValue, customPercentValue, tipPercent);
@@ -128,7 +141,7 @@ resultBtn.addEventListener("click", (e) => {
     // total = amount * percent /100
     const tip = Math.floor((billInputValue * tipPercent) / 100);
 
-    const totalTip = tip * numberOfPeopleInputValue;
+    const totalTip = Math.floor(tip / numberOfPeopleInputValue);
 
     console.log("Tip amount " + tip + ", " + "total tip " + totalTip);
 
